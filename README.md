@@ -6,7 +6,7 @@ album tracklists, and save favorite tracks directly in the browser.
 
 ## Live Demo
 
-[Open Music Search](https://your-public-url.com)
+[Open Music Search](https://heymusicsearch.netlify.app/)
 
 ## Features
 
