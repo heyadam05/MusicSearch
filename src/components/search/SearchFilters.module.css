@@ -1,0 +1,159 @@
+.panel {
+  position: sticky;
+  top: 104px;
+  width: 250px;
+  flex: 0 0 250px;
+  align-self: flex-start;
+  padding: 19px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.panel header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel h2 {
+  margin: 0;
+  font-size: 0.96rem;
+}
+
+.panel header button {
+  padding: 5px;
+  border: 0;
+  color: var(--primary-hover);
+  background: transparent;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.panel header .close {
+  display: none;
+}
+
+.panel fieldset,
+.group {
+  margin: 0;
+  padding: 18px 0;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.panel legend,
+.group > label {
+  margin-bottom: 13px;
+  color: var(--text);
+  font-size: 0.77rem;
+  font-weight: 700;
+}
+
+.panel fieldset > label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  cursor: pointer;
+}
+
+.panel fieldset > label input {
+  position: absolute;
+  opacity: 0;
+}
+
+.check {
+  width: 17px;
+  height: 17px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: transparent;
+  background: var(--surface-strong);
+  font-size: 0.72rem;
+}
+
+input:checked + .check {
+  color: white;
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
+.group {
+  display: grid;
+}
+
+.group select,
+.years input {
+  min-height: 39px;
+  padding-inline: 10px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--text-secondary);
+  background: var(--surface-strong);
+}
+
+.years {
+  border-bottom: 0 !important;
+}
+
+.years > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.years label {
+  display: grid !important;
+  gap: 6px !important;
+  margin: 0 !important;
+}
+
+.years label span {
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+
+.years input {
+  width: 100%;
+  position: static !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 1000px) {
+  .panel {
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    right: 0;
+    width: min(340px, 90vw);
+    height: 100dvh;
+    display: none;
+    padding: 24px;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .panel.open {
+    display: block;
+  }
+
+  .panel header {
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .panel header .close {
+    display: grid;
+    place-items: center;
+    color: var(--text);
+    font-size: 1.2rem;
+  }
+}

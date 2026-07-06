@@ -1,0 +1,317 @@
+.page {
+  padding-top: clamp(54px, 8vw, 92px);
+}
+
+.hero {
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.eyebrow {
+  color: var(--primary-hover);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.copy h1 {
+  margin: 12px 0 18px;
+  font-size: clamp(2.7rem, 6vw, 4rem);
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+}
+
+.copy h1 strong {
+  color: transparent;
+  background: linear-gradient(110deg, #60a5fa, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.rule {
+  width: 52px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--primary);
+}
+
+.copy > p {
+  max-width: 580px;
+  margin: 26px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.actions a {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  color: var(--text);
+  background: var(--surface);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.actions a:first-child {
+  border-color: transparent;
+  color: white;
+  background: var(--primary);
+}
+
+.illustration {
+  position: relative;
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.22), transparent 65%);
+}
+
+.orbit {
+  width: 190px;
+  height: 190px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(96, 165, 250, 0.45);
+  border-radius: 42px;
+  color: var(--primary-hover);
+  background: linear-gradient(145deg, #172a48, #0d1b31);
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.45);
+  font-size: 5rem;
+  transform: rotate(-5deg);
+}
+
+.headphones {
+  position: absolute;
+  width: 190px;
+  height: 205px;
+  top: 85px;
+  left: calc(50% - 135px);
+  border: 22px solid #08162c;
+  border-bottom: 0;
+  border-radius: 105px 105px 0 0;
+  transform: rotate(-12deg);
+}
+
+.headphones i,
+.headphones b {
+  position: absolute;
+  width: 54px;
+  height: 82px;
+  top: 120px;
+  border: 5px solid #162d51;
+  border-radius: 24px;
+  background: #07152a;
+  box-shadow: inset 0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+.headphones i { left: -37px; }
+.headphones b { right: -37px; }
+
+.searchBubble,
+.preview {
+  position: absolute;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 14px;
+  color: var(--text-secondary);
+  background: rgba(10, 23, 43, 0.88);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.searchBubble {
+  top: 5px;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  font-size: 0.75rem;
+}
+
+.preview {
+  right: 0;
+  bottom: 20px;
+  width: 205px;
+  padding: 14px;
+}
+
+.preview div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.62rem;
+}
+
+.preview i {
+  display: block;
+  height: 4px;
+  margin: 10px 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--primary) 45%, rgba(148, 163, 184, 0.2) 45%);
+}
+
+.preview > svg {
+  padding: 8px;
+  box-sizing: content-box;
+  border-radius: 50%;
+  color: white;
+  background: var(--primary);
+}
+
+.technology {
+  margin-top: 52px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(8, 18, 32, 0.35);
+}
+
+.technology > h2 {
+  margin: 0 0 20px;
+  font-size: 1rem;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.techGrid article {
+  min-width: 0;
+  padding: 20px 13px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  text-align: center;
+}
+
+.techGrid article > span {
+  display: grid;
+  place-items: center;
+  min-height: 45px;
+  color: var(--primary-hover);
+  font-size: 2.5rem;
+}
+
+.techGrid h3 {
+  margin: 13px 0 7px;
+  font-size: 0.78rem;
+}
+
+.techGrid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.65rem;
+  line-height: 1.5;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.highlights article {
+  display: flex;
+  gap: 16px;
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+.highlights article > span {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--primary-hover);
+  background: rgba(59, 130, 246, 0.12);
+  font-size: 1.35rem;
+}
+
+.highlights article > .pink {
+  color: #fb7185;
+  background: rgba(251, 113, 133, 0.12);
+}
+
+.highlights h2 {
+  margin: 2px 0 7px;
+  font-size: 0.9rem;
+}
+
+.highlights p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.note p { margin: 0; }
+.note kbd {
+  padding: 2px 7px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  background: var(--surface);
+}
+
+:global(:root[data-theme='light']) .technology {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+:global(:root[data-theme='light']) .searchBubble,
+:global(:root[data-theme='light']) .preview {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1000px) {
+  .techGrid { grid-template-columns: repeat(3, 1fr); }
+  .highlights { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; }
+  .copy { text-align: center; }
+  .rule { margin-inline: auto; }
+  .copy > p { margin-inline: auto; }
+  .actions { justify-content: center; }
+  .illustration { min-height: 340px; }
+}
+
+@media (max-width: 520px) {
+  .techGrid { grid-template-columns: repeat(2, 1fr); }
+  .technology { padding: 16px; }
+  .illustration { transform: scale(0.86); margin: -25px; }
+  .highlights article { padding: 18px; }
+}

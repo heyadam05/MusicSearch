@@ -1,0 +1,45 @@
+.card {
+  min-height: 152px;
+  display: flex;
+  gap: 18px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.cover,
+.lines i {
+  background: linear-gradient(100deg, #142238 25%, #1d314e 45%, #142238 65%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.cover {
+  width: 124px;
+  height: 124px;
+  flex: 0 0 124px;
+  border-radius: 12px;
+}
+
+.lines {
+  flex: 1;
+  display: grid;
+  align-content: center;
+  gap: 11px;
+}
+
+.lines i {
+  width: 90%;
+  height: 11px;
+  border-radius: 6px;
+}
+
+.lines i:nth-child(2) { width: 55%; }
+.lines i:nth-child(3) { width: 72%; }
+.lines i:nth-child(4) { width: 42%; }
+
+@keyframes shimmer {
+  to { background-position-x: -200%; }
+}

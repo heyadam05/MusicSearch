@@ -1,0 +1,141 @@
+.wrapper {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(13, 24, 40, 0.72);
+  overflow: hidden;
+}
+
+.heading,
+.list li {
+  display: grid;
+  grid-template-columns: 30px 42px minmax(180px, 1.4fr) minmax(120px, 1fr) 90px 42px;
+  align-items: center;
+  gap: 8px;
+}
+
+.heading {
+  padding: 15px 18px;
+  color: var(--muted);
+  font-size: 0.69rem;
+  text-transform: uppercase;
+}
+
+.heading span:nth-child(2) {
+  grid-column: 2 / 4;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  min-height: 62px;
+  padding: 8px 18px;
+  border-top: 1px solid var(--border);
+  transition: 160ms ease;
+}
+
+.list li:hover,
+.list .active {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.number,
+.artist,
+.duration {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+}
+
+.play {
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.play {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(59, 130, 246, 0.7);
+  border-radius: 50%;
+  color: white;
+}
+
+.play:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.title {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title strong,
+.artist {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title strong {
+  font-size: 0.82rem;
+}
+
+.title small {
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: var(--muted);
+  background: rgba(148, 163, 184, 0.18);
+  font-size: 0.55rem;
+}
+
+.favorite {
+  display: grid;
+  place-items: center;
+  padding: 7px;
+  font-size: 1.08rem;
+}
+
+@media (max-width: 700px) {
+  .heading,
+  .list li {
+    grid-template-columns: 32px minmax(0, 1fr) 54px 34px;
+  }
+
+  .heading {
+    display: none;
+  }
+
+  .list li {
+    min-height: 66px;
+    padding-inline: 12px;
+  }
+
+  .number,
+  .artist {
+    display: none;
+  }
+
+  .play {
+    grid-column: 1;
+  }
+
+  .title {
+    grid-column: 2;
+  }
+
+  .duration {
+    grid-column: 3;
+  }
+
+  .favorite {
+    grid-column: 4;
+  }
+}

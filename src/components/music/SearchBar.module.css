@@ -1,0 +1,76 @@
+.form {
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 9px 8px 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.16);
+}
+
+.form > svg {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 1.35rem;
+}
+
+.form input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  background: transparent;
+}
+
+.form input::placeholder {
+  color: var(--muted);
+}
+
+.clear {
+  display: grid;
+  padding: 8px;
+  border: 0;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.submit {
+  align-self: stretch;
+  min-width: 108px;
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: 540px) {
+  .form {
+    min-height: 58px;
+    gap: 9px;
+    padding-left: 14px;
+  }
+
+  .submit {
+    min-width: 80px;
+    padding-inline: 10px;
+  }
+}

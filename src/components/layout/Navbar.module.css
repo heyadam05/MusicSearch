@@ -1,0 +1,185 @@
+.header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  padding-top: 14px;
+  background: linear-gradient(var(--bg-deep) 70%, transparent);
+}
+
+.nav {
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: rgba(9, 18, 33, 0.86);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(18px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-size: 1.12rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brandIcon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  color: var(--primary-hover);
+  font-size: 1.55rem;
+}
+
+.menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 42px;
+  margin-inline: auto;
+}
+
+.links a {
+  position: relative;
+  padding: 22px 2px;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links a::after {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--primary);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0);
+  transition: 180ms ease;
+}
+
+.links a:hover,
+.links .active {
+  color: var(--primary-hover);
+}
+
+.links .active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button,
+.actions a,
+.menuButton {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  background: var(--surface);
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: 180ms ease;
+}
+
+:global(:root[data-theme="light"]) .header {
+  background: linear-gradient(var(--bg-deep) 70%, transparent);
+}
+
+:global(:root[data-theme="light"]) .nav,
+:global(:root[data-theme="light"]) .menu {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.actions button:hover,
+.actions a:hover {
+  color: white;
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.menuButton {
+  display: none;
+  margin-left: auto;
+}
+
+@media (max-width: 760px) {
+  .header {
+    padding-top: 8px;
+  }
+
+  .nav {
+    min-height: 58px;
+    border-radius: 18px;
+  }
+
+  .menuButton {
+    display: grid;
+  }
+
+  .menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 14px;
+    left: 14px;
+    display: none;
+    align-items: stretch;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(9, 18, 33, 0.98);
+    box-shadow: var(--shadow);
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .links {
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+  }
+
+  .links a {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .links a::after {
+    display: none;
+  }
+
+  .links .active {
+    background: rgba(59, 130, 246, 0.12);
+  }
+
+  .actions {
+    flex-direction: column;
+    padding-left: 12px;
+    border-left: 1px solid var(--border);
+  }
+}

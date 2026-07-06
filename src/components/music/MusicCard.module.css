@@ -1,0 +1,130 @@
+.card {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(20, 34, 54, 0.92), rgba(13, 24, 40, 0.88));
+  overflow: hidden;
+  transition: 180ms ease;
+}
+
+.card:hover {
+  border-color: rgba(96, 165, 250, 0.36);
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.content {
+  min-height: 152px;
+  display: flex;
+  gap: 18px;
+  padding: 14px 54px 14px 14px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.content img {
+  width: 124px;
+  height: 124px;
+  flex: 0 0 124px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: var(--surface-strong);
+}
+
+.info {
+  min-width: 0;
+  padding-top: 6px;
+}
+
+.info h3,
+.info p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info h3 {
+  margin: 0 0 7px;
+  font-size: 0.96rem;
+}
+
+.info p {
+  margin: 0 0 5px;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.info .album {
+  color: var(--muted);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: 0.71rem;
+}
+
+.play {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border: 0;
+  cursor: pointer;
+}
+
+.play {
+  bottom: 20px;
+  left: 102px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: white;
+  background: var(--primary);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.45);
+}
+
+.play:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.favorite {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  padding: 7px;
+  color: var(--text-secondary);
+  background: transparent;
+  font-size: 1.3rem;
+}
+
+.favorite:hover {
+  color: #fb7185;
+}
+
+@media (max-width: 520px) {
+  .content {
+    min-height: 130px;
+    gap: 14px;
+    padding: 12px 46px 12px 12px;
+  }
+
+  .content img {
+    width: 104px;
+    height: 104px;
+    flex-basis: 104px;
+  }
+
+  .play {
+    bottom: 17px;
+    left: 82px;
+  }
+
+  .meta {
+    margin-top: 8px;
+  }
+}

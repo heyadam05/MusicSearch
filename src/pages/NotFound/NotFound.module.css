@@ -1,0 +1,68 @@
+.page {
+  min-height: 68vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.disc {
+  color: var(--primary);
+  font-size: 4rem;
+  animation: spin 10s linear infinite;
+}
+
+.code {
+  margin-top: 12px;
+  color: transparent;
+  background: linear-gradient(115deg, #93c5fd, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: clamp(5rem, 18vw, 10rem);
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+}
+
+.page h1 {
+  margin: 18px 0 7px;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+.page p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.page > div:last-child {
+  display: flex;
+  gap: 11px;
+  margin-top: 25px;
+}
+
+.page a,
+.page button {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 17px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  background: var(--surface);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.page a {
+  border-color: transparent;
+  color: white;
+  background: var(--primary);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
